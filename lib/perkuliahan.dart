@@ -49,7 +49,7 @@ class listJadwal extends StatelessWidget{
           ),
           TextButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Quotes()));
+                Navigator.pushNamed(context, "/quotes");
               },
               child: Text('next'))
         ],

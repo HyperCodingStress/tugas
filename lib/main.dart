@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tugas/perkuliahan.dart';
 import 'package:tugas/profile_page.dart';
+import 'package:tugas/quotes.dart';
 void main(){
   runApp(MyApp());
 }
@@ -8,7 +10,13 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Home()
+        initialRoute: "/home",
+      routes: {
+          "/home" : (context) =>  Home(),
+        "/perkuliahan" : (context) =>  listJadwal(),
+        "/profile" : (context) =>  ProfilePage(),
+        "/quotes" : (context) =>  Quotes(),
+      },
     );
   }
 }
@@ -29,7 +37,7 @@ class Home extends StatelessWidget{
     );
     return Scaffold(
         appBar: AppBar(
-          title: Text("Login"),
+          title: Text("Login v2"),
         ),
       body: Container(
           decoration: BoxDecoration(color: Colors.blue),
@@ -82,11 +90,11 @@ class Home extends StatelessWidget{
   }
 
   void validasi(var username, var password,BuildContext context){
-    // if (username != "ibnu" && password != "ibnu"){
-    //   print("Salah username atau password");
-    // }else{
-     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ProfilePage()));
-    // }
+    if (username != "ibnu" && password != "ibnu"){
+      print("Salah username atau password");
+    }else{
+     Navigator.pushReplacementNamed(context, "/profile");
+    }
   }
 
 }
