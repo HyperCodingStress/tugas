@@ -26,6 +26,12 @@ class Quotes extends StatelessWidget {
                     child: Text("Harusnya aku sadar bahwa dia sudah memilihnya tetapi diriku masih mengharapkannya \n-Ibnu", style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.bold)),
                   )
                 ),
+              Container(
+                color: Colors.white,
+                child: TextButton(onPressed: (){
+                  Navigator.pop(context);
+                }, child: Text("Back",style:TextStyle(color: Colors.black))),
+              )
             ],
           ),
         )

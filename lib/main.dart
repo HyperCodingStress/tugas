@@ -82,11 +82,11 @@ class Home extends StatelessWidget{
   }
 
   void validasi(var username, var password,BuildContext context){
-    // if (username != "ibnu" && password != "ibnu"){
-    //   print("Salah username atau password");
-    // }else{
+    if (username != "ibnu" && password != "ibnu"){
+      print("Salah username atau password");
+    }else{
      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ProfilePage()));
-    // }
+    }
   }
 
 }

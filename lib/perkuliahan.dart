@@ -14,8 +14,6 @@ class Perkuliahan extends StatelessWidget {
 }
 
 class listJadwal extends StatelessWidget{
-  final List<String> entries = <String>['A', 'B', 'C'];
-  final List<int> colorCodes = <int>[600, 500, 100];
   @override
   Widget build(BuildContext context) {
     final List bulan = [
@@ -51,7 +49,8 @@ class listJadwal extends StatelessWidget{
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const Quotes()));
               },
-              child: Text('next'))
+              child: Text('next')
+          ),
         ],
       ),
     );
